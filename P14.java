@@ -70,19 +70,6 @@ public class P14
 	     }
 	     return page_faults;
 	 }
-  
-	
-	 static int findNextIndex(int curPage, int curIndex, int pages[]){
-		 //Starting at the current index find the index of future use of the page
-		 int i;
-		 for(i= curIndex+1; i < pages.length; i++){
-			 if(pages[i] == curPage){
-				 break;
-			 }
-		 }
-		 return i;
-	 }
-	 
 	 static void displayPageFrames(ArrayList<Integer> pages, int page_faults){
          System.out.print("At PageFault- " + page_faults  + " :: Pages- ");
          for(int i = 0; i < pages.size(); i++) {
